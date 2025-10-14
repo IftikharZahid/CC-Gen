@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 CC Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>💳 Credit Card Generator</h1>
+                <p class="subtitle">For Educational Purposes Only</p>
+            </div>
+
+            <div class="form-section">
+                <!-- BIN Section -->
+                <div class="form-group">
+                    <label class="section-label">BIN</label>
+                    <input type="text" id="binInput" class="bin-input" maxlength="6" value="" placeholder="Enter 6-digit BIN">
+                </div>
+
+                <!-- Date Section -->
+                <div class="form-group">
+                    <label class="section-label">Date</label>
+                    <div class="option-row">
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="dateOption" value="random" checked>
+                                <span class="radio-checkmark"></span>
+                                Random
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="dateOption" value="fixed">
+                                <span class="radio-checkmark"></span>
+                                Fixed
+                            </label>
+                        </div>
+                        
+                        <!-- Fixed Date Options - Inline -->
+                        <div class="date-options inline-options" id="dateOptions">
+                            <div class="date-inputs">
+                                <select id="monthSelect" class="select-input">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <input type="text" id="yearInput" class="year-input" maxlength="2" value="25" placeholder="YY">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- CVV Section -->
+                <div class="form-group">
+                    <label class="section-label">CVV</label>
+                    <div class="option-row">
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="cvvOption" value="random" checked>
+                                <span class="radio-checkmark"></span>
+                                Random
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="cvvOption" value="manual">
+                                <span class="radio-checkmark"></span>
+                                Manual
+                            </label>
+                        </div>
+                        
+                        <!-- Manual CVV Input - Inline -->
+                        <div class="cvv-options inline-options" id="cvvOptions">
+                            <input type="text" id="manualCVV" class="cvv-input" maxlength="3" placeholder="Enter CVV">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Quantity Section -->
+                <div class="form-group">
+                    <div class="quantity-section">
+                        <label class="quantity-label">Quantity</label>
+                        <input type="number" id="quantityInput" class="quantity-input" value="10" min="1" max="100">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="generate-btn" id="generateBtn">
+                        <span class="btn-icon">⚡</span>
+                        Generate Cards
+                    </button>
+                    <button class="copy-btn" id="copyBtn">
+                        <span class="btn-icon">📋</span>
+                        Copy All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h3>Generated Cards</h3>
+                    <div class="results-controls">
+                        <span class="cards-count" id="cardsCount">0 cards</span>
+                        <button class="clear-btn" id="clearBtn">
+                            <span class="btn-icon">🗑️</span>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="cards-display" id="cardsDisplay">
+                    <div class="empty-state">
+                        <div class="empty-icon">💳</div>
+                        <div class="empty-text">No cards generated yet</div>
+                        <div class="empty-subtext">Click "Generate Cards" to start</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div>Made with ♥ by <a href="https://t.me/getcrack" target="_blank" class="footer-link">@GetCrack</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Feedback Toast -->
+    <div class="toast" id="copyToast">
+        <span class="toast-icon">📋</span>
+        <span class="toast-text">Card copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
