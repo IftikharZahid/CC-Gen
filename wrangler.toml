@@ -1,0 +1,9 @@
+name = "credit-card-generator"
+compatibility_date = "2023-10-01"
+
+[env.production]
+workers_dev = true
+
+[[functions]]
+include = ["*.py"]
+exclude = ["requirements.txt", "venv/*"]
