@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💳 CC Generator</title>
+    <title>Credit Card Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">💳</span>
+                <span class="nav-title">Card Tools</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-link-icon">⚡</span>
+                    CC Generator
+                </a>
+                <a href="card-checker.html" class="nav-link">
+                    <span class="nav-link-icon">🔍</span>
+                    CC Checker
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="card">
             <div class="header">
-                <h1>💳 Credit Card Generator</h1>
-                <p class="subtitle">For Educational Purposes Only</p>
+                <h1>Credit Card Generator</h1>
+                <p class="subtitle">Made by @GetCrack</p>
             </div>
 
+            <!-- Rest of the generator content remains the same -->
             <div class="form-section">
                 <!-- BIN Section -->
                 <div class="form-group">
                     <label class="section-label">BIN</label>
-                    <input type="text" id="binInput" class="bin-input" maxlength="6" value="" placeholder="Enter 6-digit BIN">
+                    <input type="text" id="binInput" class="bin-input" maxlength="6" value="411111" placeholder="Enter 6-digit BIN">
                 </div>
 
                 <!-- Date Section -->
@@ -55,7 +76,7 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <input type="text" id="yearInput" class="year-input" maxlength="2" value="25" placeholder="YY">
+                                <input type="text" id="yearInput" class="year-input" maxlength="2" value="24" placeholder="YY">
                             </div>
                         </div>
                     </div>
